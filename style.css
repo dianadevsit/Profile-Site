@@ -1,0 +1,107 @@
+:root {
+  --bg: #f6f8fa;
+  --primary: #5c6ac4;
+  --accent: #ff5c8a;
+  --text: #222;
+}
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+.hero {
+  background: linear-gradient(to right, var(--primary), var(--accent));
+  padding: 3rem;
+  text-align: center;
+  color: white;
+}
+.section {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.card {
+  background: white;
+  width: 280px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  transition: transform 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.card img {
+  width: 100%;
+  border-radius: 12px;
+}
+.btn {
+  display: inline-block;
+  background: var(--primary);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  margin-top: 1rem;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+.btn:hover {
+  background: var(--accent);
+}
+.btn.ghost {
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+.btn.ghost:hover {
+  background: var(--primary);
+  color: white;
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  max-width: 95%;
+  width: 900px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.theme-toggle {
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  font-size: 1rem;
+  padding: 0.4rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.theme-toggle:hover {
+  background: var(--primary);
+  color: white;
+}
